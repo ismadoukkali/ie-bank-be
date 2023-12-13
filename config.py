@@ -10,6 +10,7 @@ class Config(object):
 class LocalConfig(Config):
     basedir = os.path.abspath(os.path.dirname(__file__))
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir,'.db', 'local.db')
+    print(SQLALCHEMY_DATABASE_URI)
     DEBUG = True
 
 class GithubCIConfig(Config):
